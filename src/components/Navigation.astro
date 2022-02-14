@@ -1,0 +1,18 @@
+---
+const { isHome } = Astro.props;
+---
+
+<header>
+  {isHome ??
+      <div class="brand">
+        Charles Villard
+      </div>
+  }
+  <nav class="navigation">
+    <ul class="navlinks">
+      <li class="navitem"><a href="/#" class="navlink">Work</a></li>
+      <li class="navitem"><a href="/#" class="navlink">Writing</a></li>
+      <li class="navitem"><a href="/#" class="navlink">About</a></li>
+    </ul>
+  </nav>
+</header>

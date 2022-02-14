@@ -10,15 +10,21 @@
   font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
 }
 
+
 body {
-  padding: 4rem 2rem;
   width: 100%;
+  max-width: 70ch;
   min-height: 100vh;
+  padding: 4rem 2rem;
   display: grid;
   justify-content: center;
+  margin: auto;
+  line-height: 1.75;
+  font-size: 1.25em;
   background: #f9fafb;
   color: #111827;
 }
+
 
 @media (prefers-color-scheme: dark) {
   body {

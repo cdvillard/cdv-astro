@@ -1,4 +1,5 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import Tour from '../components/Tour.astro';
 
 let title = 'My New Astro Site!';
@@ -18,14 +19,10 @@ let title = 'My New Astro Site!';
 
 <body>
   <main>
-    <header>
-      <div>
-        <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-        <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-      </div>
-    </header>
+    <Navigation isHome={false}/>
 
-    <Tour />
+    <h1>Charles Villard</h1>
+    <p>is a frontend developer who enjoys building digital tools that make users' lives easier. Currently working as a Software Engineer at Hewlett-Packard Enterprise.</p>
   </main>
 </body>
 </html>
