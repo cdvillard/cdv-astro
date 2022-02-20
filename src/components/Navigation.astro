@@ -1,18 +1,35 @@
 ---
-const { isHome } = Astro.props;
 ---
 
-<header>
-  {isHome ??
-      <div class="brand">
-        Charles Villard
-      </div>
-  }
-  <nav class="navigation">
-    <ul class="navlinks">
-      <li class="navitem"><a href="/#" class="navlink">Work</a></li>
-      <li class="navitem"><a href="/#" class="navlink">Writing</a></li>
-      <li class="navitem"><a href="/#" class="navlink">About</a></li>
-    </ul>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    let menuButton = document.querySelector('.navbar-burger');
+    menuButton.addEventListener('click', () => {
+      // Get the target from the "data-target" attribute
+        const target = menuButton.dataset.target;
+        const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      menuButton.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+    })
+  })
+</script>
+
+<header class="navbar">
+  <div class="navbar-brand">
+    <span class="navbar-item">Charles Villard</span>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <nav id="navbarMenu" class="navbar-menu">
+    <div  class="navbar-end">
+      <a href="/#" class="navbar-item">About</a>
+      <a href="/#" class="navbar-item">Work</a>
+      <a href="/#" class="navbar-item">Writing</a>
+    </div>
   </nav>
 </header>

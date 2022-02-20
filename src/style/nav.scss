@@ -1,0 +1,18 @@
+.navigation {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .navlinks {
+    border: 1px solid red;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 5rem;
+
+    .navlink {
+      padding-left: 3vw;
+    }
+  }
+}

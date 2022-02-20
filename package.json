@@ -9,6 +9,11 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.21.6"
+    "astro": "^0.21.6",
+    "autoprefixer": "^10.4.2",
+    "sass": "^1.49.7"
+  },
+  "dependencies": {
+    "bulma": "^0.9.3"
   }
 }

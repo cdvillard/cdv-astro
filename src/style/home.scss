@@ -1,7 +1,7 @@
-:root {
-    --font-mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-    --color-light: #F3F4F6;
-}
+// :root {
+//     --font-mono: Courier, monospace;
+//     --color-light: #F3F4F6;
+// }
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -27,9 +27,15 @@ header h1 {
     font-size: 1em;
     font-weight: 500;
 }
+
 header img {
     width: 2em;
     height: 2.667em;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Vault Alarm', serif;
+
 }
 
 h2 {
