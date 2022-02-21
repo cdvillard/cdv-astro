@@ -1,6 +1,29 @@
 @charset "utf-8";
+
+@import "../../node_modules/open-props/colors.min.css";
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
+:root {
+  // --background-color: hsl(0, 0%, 96%);
+  --text: var(--teal-9);
+  --text-strong: var(--teal-9);
+
+  @media (prefers-color-scheme: dark) {
+    // --background-color: hsl(0, 0%, 14%);
+    --text: var(--green-4);
+    --text-strong: var(--green-4);
+  }
+}
+
+// $background: var(--background-color);
+$text: var(--text);
+$text-strong: var(--text-strong);
+
+@import "../node_modules/bulma/sass/utilities/derived-variables";
+
 @import "../node_modules/bulma/bulma.sass";
 
-// @import "global";
-// @import "home";
-// @import "nav";
+@import "global";
+@import "home";
+@import "nav";
