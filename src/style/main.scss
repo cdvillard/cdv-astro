@@ -1,28 +1,43 @@
 @charset "utf-8";
 
-@import "../../node_modules/open-props/colors.min.css";
-@import "../../node_modules/bulma/sass/utilities/initial-variables";
-@import "../../node_modules/bulma/sass/utilities/functions";
+@import "../../node_modules/open-props/open-props.min.css";
+@import "../../node_modules/open-props/normalize.min.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Orelega+One&display=swap');
+
+@font-face {
+  font-family: "Vault Alarm";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Vault Alarm Soft"), local("Vault-Alarm-Soft"),
+    url("../fonts/VaultAlarm-Soft.woff2") format("woff2");
+  font-display: swap;
+}
 
 :root {
   // --background-color: hsl(0, 0%, 96%);
-  --text: var(--teal-9);
-  --text-strong: var(--teal-9);
+  --text: var(--gray-8);
+  --text-strong: var(--gray-8);
+  --background: var(--gray-0);
+  --font-heading: 'Vault Alarm', Impact, Arial Black, sans-serif;
+  --font-family: 'Fraunces', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Apple Color Emoji, Segoe UI Emoji;
 
   @media (prefers-color-scheme: dark) {
     // --background-color: hsl(0, 0%, 14%);
-    --text: var(--green-4);
-    --text-strong: var(--green-4);
+    --text: var(--gray-1);
+    --text-strong: var(--gray-1);
+    --background: var(--gray-9);
   }
 }
 
 // $background: var(--background-color);
 $text: var(--text);
 $text-strong: var(--text-strong);
+$background-color: var(--background);
+$navbar-background-color: var(--background);
+$font-heading: var(--font-heading);
+$font-family: var(--font-family);
 
-@import "../node_modules/bulma/sass/utilities/derived-variables";
-
-@import "../node_modules/bulma/bulma.sass";
 
 @import "global";
 @import "home";

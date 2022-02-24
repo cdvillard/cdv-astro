@@ -1,4 +1,5 @@
 ---
+  let { isHome } = Astro.props;
 ---
 
 <script>
@@ -17,21 +18,16 @@
 </script>
 
 <header class="navbar">
-  <div class="container is-max-desktop">
-  <div class="navbar-brand">
-    <span class="navbar-item">Charles Villard</span>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <nav id="navbarMenu" class="navbar-menu">
-    <div  class="navbar-end">
-      <a href="/#" class="navbar-item">About</a>
-      <a href="/#" class="navbar-item">Work</a>
-      <a href="/#" class="navbar-item">Writing</a>
+  <div class="container">
+    <div class="navbar-brand">
+      {
+        isHome ? <span class="navbar-item branded-text">Charles Villard</span> : null
+      }
     </div>
-  </nav>
+    <nav id="navbarMenu" class="navbar-menu">
+        <a href="/#" class="navbar-item">About</a>
+        <a href="/#" class="navbar-item">Work</a>
+        <a href="/#" class="navbar-item">Writing</a>
+    </nav>
   </div>
 </header>

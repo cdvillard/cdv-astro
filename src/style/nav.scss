@@ -1,0 +1,35 @@
+// .navbar {
+//   .container {
+//     width: 100%;
+//     display: flex;
+//     flex-flow: column nowrap;
+//     align-items: center;
+//     padding-bottom: 2rem;
+
+//     .navbar-menu {
+//       width: 100%;
+//       display: flex;
+//       flex-flow: row nowrap;
+//       justify-content: space-around;
+//       padding-top: 1rem;
+//     }
+
+//     @media (min-width: 789px) {
+//       flex-flow: row nowrap;
+//       justify-content: space-between;
+
+//       .navbar-menu {
+//         width: auto;
+//         display: flex;
+//         flex-flow: row nowrap;
+//         justify-content: unset;
+//         padding-top: 0;
+
+//         .navbar-item {
+//           padding-left: 4rem;
+//         }
+//       }
+//     }
+//   }
+
+// }

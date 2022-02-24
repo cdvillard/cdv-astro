@@ -1,23 +1,25 @@
-:root {
-    --font-mono: Courier, monospace;
-    --color-light: #F3F4F6;
-}
+// :root {
+//     --font-mono: Courier, monospace;
+//     --color-light: #F3F4F6;
+// }
 
-a {
-    color: inherit;
-}
+// a {
+//     color: inherit;
+// }
 
-header h1 {
-    font-size: 1em;
-    font-weight: 500;
-}
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
 
-header img {
-    width: 2em;
-    height: 2.667em;
-}
+    .intro {
 
-h2 {
-    font-weight: 500;
-    font-size: clamp(1.5rem, 1rem + 1.25vw, 2rem);
+    }
+
+    .home-branding {
+        font-weight: 700;
+        display: inline;
+        font-size: 3.052rem;
+        // letter-spacing: -.125rem;
+    }
 }
