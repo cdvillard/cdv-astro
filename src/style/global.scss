@@ -17,6 +17,8 @@
 
 html {
   background-color: $background-color;
+  background-image: var(--background-image);
+  height:auto;
 }
 
 body {
@@ -26,7 +28,8 @@ body {
   padding: 2rem;
   font-size: 1.25em;
   color: $text;
-  background-color: $background-color;
+  //background-color: $background-color;
+  //background-image: var(--background-image);
   display: flex;
   flex-flow: column nowrap;
   font-family: $font-family;

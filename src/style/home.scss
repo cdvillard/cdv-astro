@@ -20,6 +20,19 @@
         font-weight: 700;
         display: inline;
         font-size: 3.052rem;
+        color: var(--c-red);
         // letter-spacing: -.125rem;
+    }
+}
+
+.colors{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    >*{
+        // --shadow-strength: 10px;
+        aspect-ratio: 1/1;
+        box-shadow: var(--shadow-4);
     }
 }
