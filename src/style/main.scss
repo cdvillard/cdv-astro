@@ -4,13 +4,13 @@
 @import "../../node_modules/open-props/normalize.min.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Orelega+One&display=swap');
+@import url('/fonts/VaultAlarm-Soft.woff2');
 
 @font-face {
   font-family: "Vault Alarm";
   font-style: normal;
   font-weight: 700;
-  src: local("Vault Alarm Soft"), local("Vault-Alarm-Soft"),
-    url("/fonts/VaultAlarm-Soft.woff2") format("woff2");
+  src: url("/assets/fonts/VaultAlarm-Soft.woff2") format("woff2"), local("Vault Alarm Soft"), local("Vault-Alarm-Soft");
   font-display: swap;
 }
 
