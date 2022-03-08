@@ -1,7 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
-
+import headshotReference from '../../public/assets/headshot.png';
 let title = 'Charles Villard';
 
 ---
@@ -21,7 +21,7 @@ let title = 'Charles Villard';
     <main>
       <section class="hero-section">
         <div class="headshot" >
-          <img src="/public/assets/headshot.png" alt="Photo of Charles Villard">
+          <img src={headshotReference} alt="Photo of Charles Villard">
         </div>
         <div class="intro">
           <div class="branded-text home-branding">Charles Villard</div>
