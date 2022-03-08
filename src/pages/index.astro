@@ -1,7 +1,8 @@
 ---
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
-import headshotReference from '../../public/assets/headshot.png';
+const headshot = (await import('../../public/assets/headshot.png')).default;
+
 let title = 'Charles Villard';
 
 ---
@@ -21,7 +22,7 @@ let title = 'Charles Villard';
     <main>
       <section class="hero-section">
         <div class="headshot" >
-          <img src={headshotReference} alt="Photo of Charles Villard">
+          <img src={headshot} alt="Photo of Charles Villard">
         </div>
         <div class="intro">
           <div class="branded-text home-branding">Charles Villard</div>
