@@ -2,21 +2,6 @@
   let { isHome } = Astro.props;
 ---
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    let menuButton = document.querySelector('.navbar-burger');
-    menuButton.addEventListener('click', () => {
-      // Get the target from the "data-target" attribute
-        const target = menuButton.dataset.target;
-        const $target = document.getElementById(target);
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      menuButton.classList.toggle('is-active');
-      $target.classList.toggle('is-active');
-    })
-  })
-</script>
-
 <header class="navbar">
   <div class="container">
     <div class="navbar-brand">
