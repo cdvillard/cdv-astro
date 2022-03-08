@@ -1,31 +1,45 @@
 ---
-import Tour from '../components/Tour.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
 
-let title = 'My New Astro Site!';
+let title = 'Charles Villard';
 
 ---
 
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{title}</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="stylesheet" href="/style/global.css">
-  <link rel="stylesheet" href="/style/home.css">
-</head>
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href={Astro.resolve("../style/main.scss")}>
+  </head>
 
-<body>
-  <main>
-    <header>
-      <div>
-        <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-        <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-      </div>
-    </header>
-
-    <Tour />
-  </main>
-</body>
+  <body>
+    <Navigation />
+    <main>
+      <section class="hero-section">
+        <div class="headshot" >
+          <img src="/public/assets/headshot.png" alt="Photo of Charles Villard">
+        </div>
+        <div class="intro">
+          <div class="branded-text home-branding">Charles Villard</div>
+          <p>
+            is a frontend developer who enjoys making it easier for people to work and create on the web. He's currently working as a <strong>Software Engineer at Hewlett-Packard Enterprise</strong>. He also helps organize <a class="link" href="/#">Front End Miami</a> and <a class="link" href="/#">speaks at events and online</a> from time to time. He hates writing in the third-person though.
+          </p>
+        </div>
+      </section>
+      <!-- <div class="colors">
+        <p style="background-color:var(--c-gray-200)"></p>
+        <p style="background-color:var(--c-gray-400)"></p>
+        <p style="background-color:var(--c-amber)"></p>
+        <p style="background-color:var(--c-cyan)"></p>
+        <p style="background-color:var(--c-blue)"></p>
+        <p style="background-color:var(--c-red)"></p>
+        <p style="background-color:var(--c-slate)"></p>
+      </div> -->
+    </main>
+    <Footer />
+  </body>
 </html>

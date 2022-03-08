@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+:root {
+  font-family: $font-family;
+  font-size: 112.5%;
+  --user-font-scale: 1rem - 16px;
+  font-size: clamp(87.5%, 46.26% + 1.0309vw + var(--user-font-scale), 112.5%);
+
+  .branded-text {
+    font-family: $font-heading;
+  }
+}
+
+html {
+  background-color: $background-color;
+  background-image: var(--background-image);
+  height:auto;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 75ch;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 1.25em;
+  color: $text;
+  display: grid;
+  grid-template-rows: 100px 1fr 2rem;
+  grid-template-areas:
+  "header header  header"
+  "main   main    main  "
+  "footer footer  footer";
+  font-family: $font-family;
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--link) !important;
+    background: linear-gradient(to right, var(--c-red), var(--c-red)),
+                linear-gradient(to right, var(--c-blue-darken), var(--c-amber), var(--c-red));
+    background-size: 100% 0.2em, 0 0.2em;
+    background-position: 100% calc(100% - 2px), 0 calc(100% - 2px);
+    background-repeat: no-repeat;
+    // transition-delay: ;
+    transition: background-size 500ms 500ms;
+    font-weight: 700;
+    position: relative;
+
+    @keyframes linkbounce {
+      from {
+        top: 0;
+      }
+
+      50% {
+        top: -.25rem;
+      }
+
+      60% {
+        top: .25rem;
+      }
+
+      75% {
+        top: -.125rem;
+      }
+
+      80% {
+        top: .125rem;
+      }
+
+      90% {
+        top: -.1rem;
+      }
+
+      100% {
+        top: 0;
+      }
+    }
+
+    &:hover {
+      animation-name: "linkbounce";
+      animation-duration: 500ms;
+      text-decoration: none;
+      background-size: 0 0.2em, 100% 0.2em;
+    }
+  }
+
+  // h1, h2, h3, h4, h5 {
+  //   margin: 3rem 0 1.38rem;
+  //   font-family: 'Fraunces', serif;
+  //   font-weight: 700;
+  //   line-height: 1.3;
+  // }
+
+  h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+  }
+
+  h2 {
+    font-size: 2.441rem;
+  }
+
+  h3 {
+    font-size: 1.953rem;
+  }
+
+  h4 {
+    font-size: 1.563rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  small, .text_small {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    grid-area: header;
+  }
+
+  main {
+    flex-grow: 2;
+    padding-bottom: var(--size-8);
+    grid-area: main;
+  }
+
+  .footer {
+    width: 100%;
+    text-align: center;
+    grid-area: footer;
+    max-height: 2rem;
+  }
+}
+
+

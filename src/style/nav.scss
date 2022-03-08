@@ -1,0 +1,76 @@
+.navbar {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+
+    .navbar-menu {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      padding-top: 1rem;
+
+      .navbar-item {
+        color: var(--c-red);
+
+        @keyframes wiggle {
+          from {
+            transform: none;
+          }
+
+          50% {
+            transform: rotate(-12deg);
+          }
+
+          60% {
+            transform: rotate(12deg);
+          }
+
+          75% {
+            transform: rotate(-10deg);
+          }
+
+          80% {
+            transform: rotate(10deg);
+          }
+
+          90% {
+            transform: rotate(-6deg);
+          }
+
+          100% {
+            transform: none;
+          }
+        }
+
+        &:hover {
+          animation-name: "wiggle";
+          animation-duration: 500ms;
+        }
+      }
+    }
+
+    @media (min-width: 786px) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      .navbar-menu {
+        width: auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        padding-top: 0;
+
+        .navbar-item {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+}
