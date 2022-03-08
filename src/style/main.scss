@@ -25,7 +25,6 @@
   --c-slate:#7690A0;
   --c-amber:#E4C774;
 
-  // --background-color: hsl(0, 0%, 96%);
   --text: var(--gray-8);
   --text-strong: var(--gray-8);
   --background: var(--gray-0);
@@ -33,19 +32,18 @@
   --background-image: radial-gradient(ellipse at top left, var(--background), var(--background-2));
   --font-heading: 'Vault Alarm', Impact, Arial Black, sans-serif;
   --font-family: 'Fraunces', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Apple Color Emoji, Segoe UI Emoji;
+  --link-visited: var(--gray-8);
+  --link:var(--gray-8);
 
-  --link:var(--c-blue-darken);
   @media (prefers-color-scheme: dark) {
-    // --background-color: hsl(0, 0%, 14%);
     --text: var(--gray-1);
     --text-strong: var(--gray-1);
     --background: var(--gray-9);
     --background-2: var(--c-gray-400);
-    --link:var(--c-cyan);
+    --link:var(--gray-1);
   }
 }
 
-// $background: var(--background-color);
 $text: var(--text);
 $text-strong: var(--text-strong);
 $background-color: var(--background);

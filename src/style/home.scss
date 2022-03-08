@@ -1,27 +1,75 @@
-// :root {
-//     --font-mono: Courier, monospace;
-//     --color-light: #F3F4F6;
-// }
-
-// a {
-//     color: inherit;
-// }
-
 .hero-section {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
+    grid-template-areas:
+    "headshot"
+    "intro";
+    justify-items: center;
 
-    .intro {
+    @media (min-width: 512px) {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 100px);
+        max-width: 80vw;
+        margin: 0 auto;
 
     }
 
-    .home-branding {
-        font-weight: 700;
-        display: inline;
-        font-size: 3.052rem;
-        color: var(--c-red);
-        // letter-spacing: -.125rem;
+    @media (min-width: 986px) {
+        max-width: 75vw;
+    }
+
+    .headshot {
+        grid-area: headshot;
+        margin-bottom: 2rem;
+
+        @media (min-width: 512px) {
+            margin-bottom: 0;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            justify-self: start;
+            align-self: start;
+        }
+
+        @media (min-width: 986px) {
+            grid-row-start: 1;
+            grid-row-end: 6;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+
+    .intro {
+        grid-area: intro;
+
+        @media (min-width: 512px) {
+            grid-row-start: 4;
+            grid-row-end: 6;
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
+
+        @media (min-width: 986px) {
+            grid-row-start: 1;
+            grid-row-end: 6;
+            grid-column-start: 3;
+            grid-column-end: 6;
+            align-self: center;
+        }
+
+        .home-branding {
+            font-weight: 700;
+            font-size: 3.052rem;
+            color: var(--c-red);
+            line-height: 1;
+
+            .first-name {
+                text-align: left;
+                text-align: right;
+            }
+        }
     }
 }
 
