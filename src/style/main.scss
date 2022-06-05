@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 @import "../../node_modules/open-props/open-props.min.css";
-@import "../../node_modules/open-props/normalize.min.css";
+// @import "../../node_modules/open-props/normalize.min.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:wght@400;700&display=swap');
 
 @font-face {
   font-family: "Vault Alarm";
@@ -16,21 +16,33 @@
 :root {
 
   --c-cyan:#89DEEC;
-  --c-blue:#4A7F85;
-  --c-blue-darken: #31575c;
+  --c-green:#4d854a;
+  --c-blue: #31575c;
   --c-gray-200:#C2BFB9;
   --c-red:#B34D44;
   --c-gray-400:#6C6C6C;
   --c-slate:#7690A0;
   --c-amber:#E4C774;
+  --c-transparent: rgba(0, 0, 0, 0);
+  --c-white: #FFF;
+
+  // Font sizes
+  --s-h1: 2.488rem;
+  --s-h2: 2.074rem;
+  --s-h3: 1.728rem;
+  --s-h4: 1.44rem;
+  --s-h5: 1.2rem;
+  --s-small: 0.833rem;
 
   --text: var(--gray-8);
   --text-strong: var(--gray-8);
-  --background: var(--gray-0);
+  --background: var(--c-white);
   --background-2: var(--c-gray-200);
   --background-image: radial-gradient(ellipse at top left, var(--background), var(--background-2));
-  --font-heading: 'Vault Alarm', Impact, Arial Black, sans-serif;
-  --font-family: 'Fraunces', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-heading: Fraunces, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-family: Fraunces, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Apple Color Emoji, Segoe UI Emoji;
+  // --font-heading: serif;
+  // --font-family: serif;
   --link-visited: var(--gray-8);
   --link:var(--gray-8);
 

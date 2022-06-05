@@ -1,45 +1,22 @@
 ---
-import Footer from '../components/Footer.astro';
-import Navigation from '../components/Navigation.astro';
-
+import BaseLayout from '../layouts/Base.astro';
 let title = 'Charles Villard';
 
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<BaseLayout>
+  <main class="home">
+    <section class="hero-section">
+      <div class="headshot" >
+        <img src="/assets/headshot.png" alt="Photo of Charles Villard">
+      </div>
+      <div class="intro">
+        <h1 class="branded-text home-branding">Charles Villard</h1>
+        <p>
+          is a frontend developer who enjoys making it easier for people to work and create on the web. He's currently working as a <strong>Software Engineer at Hewlett-Packard Enterprise</strong>. He also helps organize <a class="link" href="/#">Front End Miami</a> and <a class="link" href="/#">speaks at events and online</a> from time to time. He hates writing in the third-person though.
+        </p>
 
-    <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href={Astro.resolve("../style/main.scss")}>
-  </head>
-
-  <body>
-    <Navigation />
-    <main>
-      <section class="hero-section">
-        <div class="headshot" >
-          <img src="/assets/headshot.png" alt="Photo of Charles Villard">
-        </div>
-        <div class="intro">
-          <div class="branded-text home-branding">Charles Villard</div>
-          <p>
-            is a frontend developer who enjoys making it easier for people to work and create on the web. He's currently working as a <strong>Software Engineer at Hewlett-Packard Enterprise</strong>. He also helps organize <a class="link" href="/#">Front End Miami</a> and <a class="link" href="/#">speaks at events and online</a> from time to time. He hates writing in the third-person though.
-          </p>
-        </div>
-      </section>
-      <!-- <div class="colors">
-        <p style="background-color:var(--c-gray-200)"></p>
-        <p style="background-color:var(--c-gray-400)"></p>
-        <p style="background-color:var(--c-amber)"></p>
-        <p style="background-color:var(--c-cyan)"></p>
-        <p style="background-color:var(--c-blue)"></p>
-        <p style="background-color:var(--c-red)"></p>
-        <p style="background-color:var(--c-slate)"></p>
-      </div> -->
-    </main>
-    <Footer />
-  </body>
-</html>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

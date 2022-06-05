@@ -1,73 +1,51 @@
 .navbar {
+  padding-bottom: 3rem;
   .container {
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    padding-bottom: 2rem;
-    font-family: var(--font-heading);
-    letter-spacing: 1px;
 
     .navbar-menu {
       width: 100%;
       display: flex;
       flex-flow: row nowrap;
-      justify-content: space-evenly;
-      padding-top: 1rem;
+      margin-left: -.125rem;
 
       .navbar-item {
-        color: var(--c-red);
-
-        @keyframes wiggle {
-          from {
-            transform: none;
-          }
-
-          50% {
-            transform: rotate(-12deg);
-          }
-
-          60% {
-            transform: rotate(12deg);
-          }
-
-          75% {
-            transform: rotate(-10deg);
-          }
-
-          80% {
-            transform: rotate(10deg);
-          }
-
-          90% {
-            transform: rotate(-6deg);
-          }
-
-          100% {
-            transform: none;
-          }
-        }
-
-        &:hover {
-          animation-name: "wiggle";
-          animation-duration: 500ms;
-        }
+        margin-right: 2rem;
       }
     }
 
-    @media (min-width: 786px) {
-      flex-flow: row nowrap;
-      justify-content: space-between;
+    .navbar-brand {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: baseline;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+      .branded-text {
+        margin-left: -.125rem;
+        font-size: var(--s-h3);
+      }
+    }
 
+    @media (min-width: 575px) {
+      flex-flow: row nowrap;
+      align-items: baseline;
+
+      .navbar-brand {
+        flex-direction: row;
+
+        .branded-text {
+          margin-left: 0;
+        }
+      }
       .navbar-menu {
         width: auto;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
-        padding-top: 0;
+        justify-self: flex-end;
+        margin-left: 0;
 
         .navbar-item {
-          margin-left: 2rem;
+          margin-right: 2rem;
         }
       }
     }
